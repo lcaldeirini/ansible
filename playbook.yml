@@ -1,0 +1,10 @@
+---
+- name: projetinho_fellas
+  hosts: aws
+  become: yes
+  tasks:
+    - name: nginx server installation
+      apt:
+        name: nginx
+        state: latest
+        update_cache: yes
